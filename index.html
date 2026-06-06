@@ -53,6 +53,7 @@ audio{width:100%;margin-top:10px;}
     <button id="play">▶︎ 再生</button>
     <button id="pause">⏸ 一時停止</button>
     <button id="replay">↻ もう一度</button>
+    <button id="goUrl">性別選択画面へ戻る</button>
   </div>
 
   <div class="status" id="status">待機中 / Sẵn sàng phát</div>
@@ -123,6 +124,7 @@ document.getElementById('next').onclick=()=>load(idx+1);
 document.getElementById('play').onclick=()=>player.play();
 document.getElementById('pause').onclick=()=>player.pause();
 document.getElementById('replay').onclick=()=>{player.currentTime=0;player.play();}
+document.getElementById('goUrl').onclick=()=>{location.href="https://orinndo.github.io/chest-X-ray-PA-erect-wheelchair-VI/";};
 player.onplay=()=>status.textContent="再生中 / Đang phát";
 player.onpause=()=>status.textContent="一時停止 / Đã tạm dừng";
 player.onended=()=>status.textContent="待機中 / Sẵn sàng phát";
